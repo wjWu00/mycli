@@ -267,7 +267,7 @@ def suggest_based_on_last_token(token, text_before_cursor, full_text, identifier
             # a GRANT query. eg: GRANT SELECT, INSERT ON <tab>
             # In that case we just suggest all tables.
             if not aliases:
-                suggest.append({'type': 'table', 'schema': parent})
+                suggest.append({'type': 'database', 'schema': parent})
             return suggest
 
     elif token_v in ('use', 'database', 'template', 'connect'):
