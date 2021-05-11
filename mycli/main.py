@@ -462,7 +462,7 @@ class MyCli(object):
                     if password_from_file:
                         new_passwd = password_from_file
                     else:
-                        new_passwd = click.prompt('Password', hide_input=True,
+                        new_passwd = click.prompt('Mysql_Password', hide_input=True,
                                                   show_default=False, type=str, err=True)
                     self.sqlexecute = SQLExecute(
                         database, user, new_passwd, host, port, socket,
